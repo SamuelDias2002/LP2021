@@ -91,6 +91,38 @@ void ordemcrescente(int v[N]) //ordenação do vetor por ordem crescente
     }
 }
 
+void vetorsin(int v[N]) //funcao que calcula o seno da funcao
+{
+
+    for (int i = 0; i < 20; i++)
+    {
+        printf("Na posicao %iº o seno é: %f\n", (i + 1), sin((v[i])));
+    };
+}
+
+void matriz(int v[N]) //função que constroi uma nova matriz utilizando os valores digitados
+{
+    printf ("A primeira linha vai ser:\n");
+    printf("\n");
+    //1 linha
+    for (int i = 0; i < 20; i++)
+        printf("%i  ", v[i]);
+    printf("\n");
+    //proximas linhas
+    printf ("A matriz criada é:\n");
+    printf("\n");
+    for (int l = 1; l < 20; l++)
+    {
+        //colunas
+        for (int c = 0; c < 20; c++)
+        {
+            printf(" %i", v[rand() % 20]);
+        }
+        printf("\n");
+    }
+}
+
+
 void devolvenumero(int v[N]) //funcao que devolve numero maior que 2 e que seja divisivel por 5
 {
     printf("Os números que são maiores que 2 e divisiveis por 5 são:");
@@ -110,7 +142,7 @@ void devolvenumero(int v[N]) //funcao que devolve numero maior que 2 e que seja 
 
 void minimodovetor(int v[N]) //funçao que revela o valor minimo do vetor
 {
-    
+
     int i = 0;
     int minimo = v[0];
 
@@ -120,5 +152,5 @@ void minimodovetor(int v[N]) //funçao que revela o valor minimo do vetor
             minimo = v[i];
     }
     printf("O valor minimo do vetor é: %d\n", minimo);
-    
 }
+
