@@ -1,0 +1,21 @@
+@mainpage Grupo x LP 2021
+Este trabalho consiste na realização de um programa que executa várias tarefas após armazenar um vetor dado pelo utilizador. 
+
+Esse vetor é limitado.
+O utilizador apenas pode digitar valores entre 7 e 30 no vetor.
+
+
+O programa tem como funcionalidades disponiveis:
+
+1º - Multiplicação de todos os valores no vetor;
+
+2º - Ordenar o vetor dado pelo utilizador por ordem crescente;
+
+3º - Calcular o seno de cada membro do vetor;
+
+4º - Construir uma nova matriz utilizando os valores digitados para a primeira matriz;
+
+5º - Procurar um número maior que 2 e divisivel por 5;
+
+6º - Revelar qual é o valor minimo do vetor dado pelo utilizador.
+
