@@ -1,12 +1,11 @@
 /** 
- * version 0.4
- * Introducing another new functions ("devolvenumero" and "minimodovetor")
- * "devolvenumero" returns the values of your vector that are greater than two and divisible by five
- * "minimodovetor" finds the lowest number in your vector
- * Updated "Makefile" file to run programs using math.c
+ * version 0.5
+ * Introducing 2 more functions named as "vetorsin" and "matriz"
+ * "vetorsin" calculates the sine of all elements
+ * "matriz" generates a matrix  using the elements that user input at the very beginning where the first line is the starting vector 
+ * Ordaining the functions in "funcoes.c" and "funcoes.h" to make sure they are organized like in the menu
  * Minor bugs fixed
- */
-
+*/
 
 #include "funcoes.h"
 #include <stdio.h>
@@ -71,7 +70,8 @@ int main()
     printf("7 - Sair\n");
     printf("\n");
     scanf("%d", &escolher);
-    if (escolher == 0 || escolher > 7)
+
+if (escolher == 0 || escolher > 7)
     {
         printf("Por favor digite um valor entre 1 e 6! \n");
         scanf("%d", &escolher);
@@ -89,10 +89,10 @@ int main()
                 ordemcrescente(arr);
                 break;
             case 3:
-                //funcão calculo seno
+                vetorsin (arr);
                 break;
             case 4:
-                //função construção matriz
+                matriz(arr);
                 break;
             case 5:
                 //função devolução dos valores maisores que 2 e divisiveis por 5
