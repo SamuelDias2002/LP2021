@@ -1,10 +1,9 @@
 /** 
- * version 0.5
- * Introducing 2 more functions named as "vetorsin" and "matriz"
- * "vetorsin" calculates the sine of all elements
- * "matriz" generates a matrix  using the elements that user input at the very beginning where the first line is the starting vector 
- * Ordaining the functions in "funcoes.c" and "funcoes.h" to make sure they are organized like in the menu
- * Minor bugs fixed
+ * @file main.c
+ * @brief Programa com o obejtivo de oferecer um conjunto de funcionalidades. Ler Reedme para mais informações
+ * @version 0.5
+ * @authors Samuel Dias, name2, name3, name4, name5
+ 
 */
 
 #include "funcoes.h"
@@ -17,17 +16,35 @@
 
 int main()
 {
-  
-    //Processo de leitura e escrita do array
-    int arr[N], confirmararray, escolher;
-    int enter;
+
+    /**
+     * Parte que contem a funcionalidade de introdução e confirmação do vetor.
+     * Além disso, apresenta o menu com as funcionalidades disponiveis para o utilizador poder execeutar
+     *  
+     */
+
+    /**
+     * @param arr variável que vai armazenar o vetor do utilizador
+     */
+    int arr[N];
+    /**
+     * @param confirmararray variavel que permite confirmar o vetor escolhido
+     */
+    int confirmararray;
+    /**
+     * @param escolher varivael que vai permitir o utilizador escolher a funcionalidade que quer executar
+     */
+    int escolher;
+
+    char enter;
+    //enter variavel que vai ser util para podermos voltar ao menu de funções disponiveis
     ler(arr);
     escreve(arr);
-    //Processo de validação do vetor
     printf("\n");
     printf("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
     printf("Tem a certeza que quer este vetor? \n1 - Sim\n2 - Não\n");
     printf("\n");
+    printf (">>>>> ");
     scanf("%d", &confirmararray);
     printf("\n");
     if (confirmararray == 0 || confirmararray > 2)
@@ -58,7 +75,6 @@ int main()
         } while (confirmararray == 2);
     }
 
-    //Processo de construção do menu de opções
     printf("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
     printf("Escolha a função que pretende executar: \n");
     printf("1 - Cálculo da multiplicação de todos os elementos no vetor\n");
@@ -71,36 +87,35 @@ int main()
     printf("\n");
     scanf("%d", &escolher);
 
-if (escolher == 0 || escolher > 7)
+    if (escolher == 0 || escolher > 7)
     {
         printf("Por favor digite um valor entre 1 e 6! \n");
         scanf("%d", &escolher);
     }
     else
     {
-        //Case que perimite ao utilizador escolher o "programa" a executar
+
         {
             switch (escolher)
             {
             case 1:
                 multiplicacao(arr);
+                //voltaratras;
                 break;
             case 2:
                 ordemcrescente(arr);
                 break;
             case 3:
-                vetorsin (arr);
+                vetorsin(arr);
                 break;
             case 4:
                 matriz(arr);
                 break;
             case 5:
-                //função devolução dos valores maisores que 2 e divisiveis por 5
-                devolvenumero (arr);
+                devolvenumero(arr);
                 break;
             case 6:
-                minimodovetor (arr);
-                
+                minimodovetor(arr);
                 break;
             case 7:
                 printf("\n");
@@ -112,4 +127,5 @@ if (escolher == 0 || escolher > 7)
             }
         }
     }
+    
 }

@@ -1,19 +1,56 @@
-
+/** 
+ * @file funcoes.c
+ * @brief Ficheiro com todos as funções necessárias
+ * @version 0.5
+ * @authors Samuel Dias, name2, name3, name4, name5
+ 
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #define N 20
 
-/*Existe a necessidade de criar uma função para limpar o input c
-caso o utilizador digite uma letra no menu*/
+/** 
+ * Função que permite ao programa limpar a consola (input) em caso do utilizador digitar alguma letra ou simbolo inválido
+*/
 void limpaInput()
 {
-    while (getchar() != '\n')
-        ;
+    while (getchar() != '\n');
 }
 
-//Leitura e escrita do array
+void clear()
+{
+    system ("clear");
+}
+
+
+/*void voltaratras ()
+{
+    char enter[5];
+    int confirmar;
+           do
+                {
+                    printf("Pressiona ENTER para voltares ao menu de funcionalidades\n");
+                    fgets(enter, 5, stdin);
+                    char *pos = strchr(enter, '\n');
+                    *pos = '\0';
+
+                    if ((strcmp(enter, "\0") == 0))
+                    {
+                        confirmar = 1;
+                        clear();
+                        
+                    }
+                    else
+                        confirmar = 0;
+                } while (enter == 0);
+}*/
+
+
+/**
+ * Permite a leitura do vetor para ser possivel proceder para menu de funcionalidades 
+ */
 void ler(int v[N])
 {
     printf("Antes de poder aceder ao menu de funcionalidades, precisamos de saber qual é o seu vetor! \n");
@@ -45,6 +82,7 @@ void ler(int v[N])
     printf("\n");
 }
 
+//Função que permite ao utilizador visualizar o vetor que digitou
 void escreve(int v[N])
 {
     printf("O vetor é: ");
@@ -57,9 +95,11 @@ void escreve(int v[N])
     printf("\n");
 }
 
-//Funções com o obejtivo de executar os programas
-
-void multiplicacao(int v[N]) //multiplicação de todos os valores no vetor
+/**
+ Função que faz a multiplicação de todos os valores no vetor
+ @param total variavel que vai armazenar o valor da multiplicação de todas os membros do vetor 
+*/
+void multiplicacao(int v[N])
 {
     long total = 1;
     for (int i = 0; i < N; i++)
@@ -68,9 +108,14 @@ void multiplicacao(int v[N]) //multiplicação de todos os valores no vetor
         total *= v[i];
     }
     printf("A multiplicação dos valores do vetor é %ld\n", total);
+    printf ("\n");
 }
 
-void ordemcrescente(int v[N]) //ordenação do vetor por ordem crescente
+/**
+ Função que ordena o vetor escolhido por ordem crescente
+ @param aux variavel que vai funcionar como auxiliar para ordenar o vetor na ordem crescente
+*/
+void ordemcrescente(int v[N])
 {
     for (int i = 0; i < N; i++)
     {
@@ -91,7 +136,11 @@ void ordemcrescente(int v[N]) //ordenação do vetor por ordem crescente
     }
 }
 
-void vetorsin(int v[N]) //funcao que calcula o seno da funcao
+/**
+ Função que calcula o seno de cada membro do vetor. Utiliza a biblioteca math.h.
+*/
+
+void vetorsin(int v[N])
 {
 
     for (int i = 0; i < 20; i++)
@@ -100,20 +149,24 @@ void vetorsin(int v[N]) //funcao que calcula o seno da funcao
     };
 }
 
-void matriz(int v[N]) //função que constroi uma nova matriz utilizando os valores digitados
+/**
+ Função que constroi uma nova matriz utilizando os valores digitados para a primeira matriz.
+*/
+
+void matriz(int v[N])
 {
-    printf ("A primeira linha vai ser:\n");
+    printf("A primeira linha vai ser:\n");
     printf("\n");
-    //1 linha
+    //Escrita da 1º linha
     for (int i = 0; i < 20; i++)
         printf("%i  ", v[i]);
     printf("\n");
-    //proximas linhas
-    printf ("A matriz criada é:\n");
+    //Gerador das próximas linhas 
+    printf("A matriz criada é:\n");
     printf("\n");
     for (int l = 1; l < 20; l++)
     {
-        //colunas
+        //Gerador das colunas 
         for (int c = 0; c < 20; c++)
         {
             printf(" %i", v[rand() % 20]);
@@ -122,10 +175,13 @@ void matriz(int v[N]) //função que constroi uma nova matriz utilizando os valo
     }
 }
 
-
-void devolvenumero(int v[N]) //funcao que devolve numero maior que 2 e que seja divisivel por 5
+/**
+ Função que devolve o numero maior que 2 e divisivel por 5.
+ @param i variavel que vai correr o vetor dado pelo utilizador à procura do que é pretendido
+*/
+void devolvenumero(int v[N])
 {
-    printf("Os números que são maiores que 2 e divisiveis por 5 são:");
+    printf("Os números que são maiores que dois e divisiveis por cinco são:\n");
     int i;
     for (i = 0; i < N; i++)
     {
@@ -140,7 +196,12 @@ void devolvenumero(int v[N]) //funcao que devolve numero maior que 2 e que seja 
     }
 }
 
-void minimodovetor(int v[N]) //funçao que revela o valor minimo do vetor
+/**
+ Função que revela qual é o valor minimo do vetor
+ @param i variavel que vai correr o vetor dado pelo utilizador
+ @param minimo variavel que armazena o menor valor existente no array 
+*/
+void minimodovetor(int v[N])
 {
 
     int i = 0;
@@ -153,4 +214,3 @@ void minimodovetor(int v[N]) //funçao que revela o valor minimo do vetor
     }
     printf("O valor minimo do vetor é: %d\n", minimo);
 }
-
