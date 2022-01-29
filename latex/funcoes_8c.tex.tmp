@@ -24,20 +24,25 @@ void \mbox{\hyperlink{funcoes_8c_a7fbea99ae4f6bb57e9a5fd5fa45022b5}{limpa\+Input
 \item 
 void \mbox{\hyperlink{funcoes_8c_a7bba5666a3be44f94af65034c8cc373a}{ler}} (int v\mbox{[}N\mbox{]})
 \item 
-\mbox{\Hypertarget{funcoes_8c_a9f5ad4e96a7440c33669d596891c4332}\label{funcoes_8c_a9f5ad4e96a7440c33669d596891c4332}} 
-void {\bfseries escreve} (int v\mbox{[}N\mbox{]})
+void \mbox{\hyperlink{funcoes_8c_a9f5ad4e96a7440c33669d596891c4332}{escreve}} (int v\mbox{[}N\mbox{]})
 \item 
 void \mbox{\hyperlink{funcoes_8c_aaea19e1fc83324a8a5303ac20b397fad}{multiplicacao}} (int v\mbox{[}N\mbox{]})
 \item 
 void \mbox{\hyperlink{funcoes_8c_ac3f0692c7fdb30e5b5a84a98368f0f9d}{ordemcrescente}} (int v\mbox{[}N\mbox{]})
 \item 
+void \mbox{\hyperlink{funcoes_8c_a52b58881ef8be118c11ac642b5a573ca}{devolvenumero}} (int v\mbox{[}N\mbox{]})
+\item 
+void \mbox{\hyperlink{funcoes_8c_af07e22012457510e56106951c6d5740c}{minimodovetor}} (int v\mbox{[}N\mbox{]})
+\item 
 void \mbox{\hyperlink{funcoes_8c_a266f24382bb25b6ee5b1fc6809417917}{vetorsin}} (int v\mbox{[}N\mbox{]})
 \item 
 void \mbox{\hyperlink{funcoes_8c_a782d726fd54a741e709bb6281cd221bb}{matriz}} (int v\mbox{[}N\mbox{]})
 \item 
-void \mbox{\hyperlink{funcoes_8c_a52b58881ef8be118c11ac642b5a573ca}{devolvenumero}} (int v\mbox{[}N\mbox{]})
+void \mbox{\hyperlink{funcoes_8c_a756d1f38bec5cf78ddee076f81b761a5}{mixvetor}} (int v\mbox{[}N\mbox{]})
 \item 
-void \mbox{\hyperlink{funcoes_8c_af07e22012457510e56106951c6d5740c}{minimodovetor}} (int v\mbox{[}N\mbox{]})
+void \mbox{\hyperlink{funcoes_8c_a4e7c49e55bc7fba4335f40c9326bd6c2}{minimomultiplo}} (int v\mbox{[}N\mbox{]})
+\item 
+void \mbox{\hyperlink{funcoes_8c_a21f701238a93034b42013ec9579b0ecc}{matrizproduto}} (int v\mbox{[}N\mbox{]})
 \end{DoxyCompactItemize}
 
 
@@ -45,10 +50,10 @@ void \mbox{\hyperlink{funcoes_8c_af07e22012457510e56106951c6d5740c}{minimodoveto
 Ficheiro com todos as funções necessárias. 
 
 \begin{DoxyVersion}{Version}
-0.\+5 
+1.\+0 
 \end{DoxyVersion}
 \begin{DoxyAuthor}{Authors}
-Samuel Dias, name2, name3, name4, name5 
+Carlos Silva, Gabriel Pacheco, Jõao Matos, Ricardo Pereira, Samuel Dias 
 \end{DoxyAuthor}
 
 
@@ -59,9 +64,22 @@ Samuel Dias, name2, name3, name4, name5
 \doxysubsubsection{\texorpdfstring{devolvenumero()}{devolvenumero()}}
 {\footnotesize\ttfamily void devolvenumero (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
 
-Função que devolve o numero maior que 2 e divisivel por 5. 
+Função que devolve o numero maior que 2 e divisivel por 5. Com um ciclo for e dois ciclos if\textquotesingle{}s, conseguimos correr o vetor de forma a verificarmos se eram maiores que 2 e divisiveis por 5.
+
+
 \begin{DoxyParams}{Parameters}
-{\em i} & variavel que vai correr o vetor dado pelo utilizador à procura do que é pretendido \\
+{\em i} & variavel que vai tomar valores de 0 a 19, de forma a correr o vetor dado pelo utilizador à procura do que é pretendido \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a9f5ad4e96a7440c33669d596891c4332}\label{funcoes_8c_a9f5ad4e96a7440c33669d596891c4332}} 
+\index{funcoes.c@{funcoes.c}!escreve@{escreve}}
+\index{escreve@{escreve}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{escreve()}{escreve()}}
+{\footnotesize\ttfamily void escreve (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+Função que permite ao utilizador visualizar o vetor que digitou. 
+\begin{DoxyParams}{Parameters}
+{\em v} & O vetor V é o vetor digitado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{funcoes_8c_a7bba5666a3be44f94af65034c8cc373a}\label{funcoes_8c_a7bba5666a3be44f94af65034c8cc373a}} 
@@ -70,7 +88,12 @@ Função que devolve o numero maior que 2 e divisivel por 5.
 \doxysubsubsection{\texorpdfstring{ler()}{ler()}}
 {\footnotesize\ttfamily void ler (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
 
-Permite a leitura do vetor para ser possivel proceder para menu de funcionalidades \mbox{\Hypertarget{funcoes_8c_a7fbea99ae4f6bb57e9a5fd5fa45022b5}\label{funcoes_8c_a7fbea99ae4f6bb57e9a5fd5fa45022b5}} 
+Permite a leitura do vetor para ser possivel proceder para menu de funcionalidades 
+\begin{DoxyParams}{Parameters}
+{\em v} & é o vetor responsável em armazenar os valores que vão ser digitados pelo utilizador \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a7fbea99ae4f6bb57e9a5fd5fa45022b5}\label{funcoes_8c_a7fbea99ae4f6bb57e9a5fd5fa45022b5}} 
 \index{funcoes.c@{funcoes.c}!limpaInput@{limpaInput}}
 \index{limpaInput@{limpaInput}!funcoes.c@{funcoes.c}}
 \doxysubsubsection{\texorpdfstring{limpaInput()}{limpaInput()}}
@@ -82,17 +105,81 @@ Função que permite ao programa limpar a consola (input) em caso do utilizador 
 \doxysubsubsection{\texorpdfstring{matriz()}{matriz()}}
 {\footnotesize\ttfamily void matriz (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
 
-Função que constroi uma nova matriz utilizando os valores digitados para a primeira matriz. \mbox{\Hypertarget{funcoes_8c_af07e22012457510e56106951c6d5740c}\label{funcoes_8c_af07e22012457510e56106951c6d5740c}} 
+Função que constroi uma nova matriz utilizando os valores digitados para a primeira matriz. Processamento da primeira linha através de um ciclo for. O mesmo acontece para ser possivel processar as proximas linhas e as respetivas colunas, excepto que aqui é o utilizado o comando rand. 
+\begin{DoxyParams}{Parameters}
+{\em v} & Vetor que fica encarregue de armazenar os valores de forma a que seja possivel contruir a matriz \\
+\hline
+{\em l} & Variavel que faz ler as linhas do vetor \\
+\hline
+{\em c} & Variavel que permite armazenar as colunas criadas através do comando rand \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a21f701238a93034b42013ec9579b0ecc}\label{funcoes_8c_a21f701238a93034b42013ec9579b0ecc}} 
+\index{funcoes.c@{funcoes.c}!matrizproduto@{matrizproduto}}
+\index{matrizproduto@{matrizproduto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{matrizproduto()}{matrizproduto()}}
+{\footnotesize\ttfamily void matrizproduto (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+Função com o objetivo de calcular uma matriz 20x20 através do produto do vetor original com o vetor original na ordem crescente. Além disso pergunta ao utilizador se pretende ver a transposta do produto, juntando dois exercicios em um só. Para isso usamos a função \char`\"{}ordemcrescente\char`\"{}, para facilitar o calculo da matriz e simplificar o código. Primeiro, foi necessário criar um ciclo for para duplicar o vetor orginal, sendo que o segundo foi logo de seguida colocado na ordem crescente. Após isso, foi calculado o produto e pedido ser pretendia ver a transposta da matriz do produto. 
+\begin{DoxyParams}{Parameters}
+{\em m} & Matriz que vai armazenar a matriz transposta e permitir com que seja possivel imprimir no ecrã para o utilizador. \\
+\hline
+{\em cres} & Vetor que vai servir de \char`\"{}clone\char`\"{} para ser possivel obter um vetor na ordem crescente \\
+\hline
+{\em check} & Variavel para o utilizador poder confirmar se pretende ver a matriz transposta \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_af07e22012457510e56106951c6d5740c}\label{funcoes_8c_af07e22012457510e56106951c6d5740c}} 
 \index{funcoes.c@{funcoes.c}!minimodovetor@{minimodovetor}}
 \index{minimodovetor@{minimodovetor}!funcoes.c@{funcoes.c}}
 \doxysubsubsection{\texorpdfstring{minimodovetor()}{minimodovetor()}}
 {\footnotesize\ttfamily void minimodovetor (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
 
-Função que revela qual é o valor minimo do vetor 
+Função que revela qual é o valor minimo do vetor. Através da utilização de um ciclo for a correr por todos os membros do vetor e armazenar o valor minimo numa variavel. 
 \begin{DoxyParams}{Parameters}
 {\em i} & variavel que vai correr o vetor dado pelo utilizador \\
 \hline
 {\em minimo} & variavel que armazena o menor valor existente no array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a4e7c49e55bc7fba4335f40c9326bd6c2}\label{funcoes_8c_a4e7c49e55bc7fba4335f40c9326bd6c2}} 
+\index{funcoes.c@{funcoes.c}!minimomultiplo@{minimomultiplo}}
+\index{minimomultiplo@{minimomultiplo}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{minimomultiplo()}{minimomultiplo()}}
+{\footnotesize\ttfamily void minimomultiplo (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+Função com o objetivo de obter o minimo multiplo comum (mmc) de cada valor do vetor dado. É necessário um ciclo for para correr o vetor incial, onde são escolhidos 2 valores seguidos (ex\+: Primeiro valor do vetor e segundo valor do vetor), e vai ser verificar se é possivel determinar o mmc. 
+\begin{DoxyParams}{Parameters}
+{\em nv} & Vetor que vai armazenar os minimos multiplos comuns dos 2 valores. \\
+\hline
+{\em mmc} & Variavel que vai armazenar o valor do minimo multiplo comum dos 2 valores dados \\
+\hline
+{\em a} & Variavel importante que vai permitir mostrar os valores dos quais foo calculado o minimo multiplo comum \\
+\hline
+{\em c} & Variavel que vai correr no ciclo for para poder calcular o valor \\
+\hline
+{\em v1} & Variavel que vai armazenar o primeiro valor necessário para o calculo do mmc \\
+\hline
+{\em v1} & Variavel que vai armazenar o segundo valor necessário para o calculo do mmc \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funcoes_8c_a756d1f38bec5cf78ddee076f81b761a5}\label{funcoes_8c_a756d1f38bec5cf78ddee076f81b761a5}} 
+\index{funcoes.c@{funcoes.c}!mixvetor@{mixvetor}}
+\index{mixvetor@{mixvetor}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{mixvetor()}{mixvetor()}}
+{\footnotesize\ttfamily void mixvetor (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+Função que está encarregue de criar uma matriz que mistura metade do primeiro vetor dado pelo utilizador com outra metade de um outro vetor pedido pelo utilizador O primeiro ciclo for tem o objetivo de usar o primeiro vetor no calculo da primeira metade da matriz vw. O segundo ciclo for é para completar o resto do vetor vw com a metade do vetor arr2. Por fim realizamos outro ciclo for, para permitir o utilizador ver a matriz vw completa. 
+\begin{DoxyParams}{Parameters}
+{\em arr} & Variavel entregue à tarefa de armazenar o segundo vetor digitado pelo utilizador \\
+\hline
+{\em confirmaarray2} & Váriavel que vai permitir a confirmação do segundo vetor para ser possivel seguir em frente \\
+\hline
+{\em vw} & Vetor que vai ter a tarefa de criar um vetor misturando metade do vetor original e metade do novo vetor \\
+\hline
+{\em p} & Variavel que vai correr as 10 primeiras posições para dar valores ao vetor vw, usando o primeiro vetor digitado \\
+\hline
+{\em s} & Variavel que vai correr as ultimas 10 primeiras posições para dar valores ao vetor vw, usando o segundo vetor digitado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{funcoes_8c_aaea19e1fc83324a8a5303ac20b397fad}\label{funcoes_8c_aaea19e1fc83324a8a5303ac20b397fad}} 
@@ -112,9 +199,9 @@ Função que faz a multiplicação de todos os valores no vetor
 \doxysubsubsection{\texorpdfstring{ordemcrescente()}{ordemcrescente()}}
 {\footnotesize\ttfamily void ordemcrescente (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
 
-Função que ordena o vetor escolhido por ordem crescente 
+Função que ordena o vetor escolhido por ordem crescente. Utiliza um ciclo for dentro de outro ciclo for para poder correr o vetor dado e poder ordenar noutro vetor \char`\"{}imaginário\char`\"{} o vetor principal. 
 \begin{DoxyParams}{Parameters}
-{\em aux} & variavel que vai funcionar como auxiliar para ordenar o vetor na ordem crescente \\
+{\em aux} & variavel que vai funcionar como variavel auxiliar onde vai receber a v\mbox{[}i\mbox{]} e realizar os processos necessários para ordenar o vetor na ordem crescente \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{funcoes_8c_a266f24382bb25b6ee5b1fc6809417917}\label{funcoes_8c_a266f24382bb25b6ee5b1fc6809417917}} 
@@ -124,3 +211,7 @@ Função que ordena o vetor escolhido por ordem crescente
 {\footnotesize\ttfamily void vetorsin (\begin{DoxyParamCaption}\item[{int}]{v\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
 
 Função que calcula o seno de cada membro do vetor. Utiliza a biblioteca math.\+h. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Variavel que vai tomar valores de 0 a 19, de forma a correr o vetor dado pelo utilizador à procura do que é pretendido \\
+\hline
+\end{DoxyParams}

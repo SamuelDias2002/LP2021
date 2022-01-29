@@ -21,7 +21,7 @@ Include dependency graph for main.\+c\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
@@ -29,21 +29,23 @@ int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 Programa com o obejtivo de oferecer um conjunto de funcionalidades. Ler Reedme para mais informações. 
 
 \begin{DoxyVersion}{Version}
-0.\+5 
+1 
 \end{DoxyVersion}
 \begin{DoxyAuthor}{Authors}
-Samuel Dias, name2, name3, name4, name5 
+Carlos Silva, Gabriel Pacheco, Jõao Matos, Ricardo Pereira, Samuel Dias 
 \end{DoxyAuthor}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
 \index{main.c@{main.c}!main@{main}}
 \index{main@{main}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
-Parte que contem a funcionalidade de introdução e confirmação do vetor. Além disso, apresenta o menu com as funcionalidades disponiveis para o utilizador poder execeutar
+A função main contem um if para que seje possivel compilar o programa com a flag --help. Caso o utilizador não use a flag ao compilar, irá executar o programa.
+
+O programa começa por executar a função ler e escrever logo de seguida. Se o vetor for confirmado, o utilizador vai ter acesso a um ménu de várias opções prontas a serem executaveis O utilizador ainda tem uma opção de ajudas disponiveis para simplificar ainda mais a utilização
 
 
 \begin{DoxyParams}{Parameters}
@@ -52,5 +54,7 @@ Parte que contem a funcionalidade de introdução e confirmação do vetor. Alé
 {\em confirmararray} & variavel que permite confirmar o vetor escolhido\\
 \hline
 {\em escolher} & varivael que vai permitir o utilizador escolher a funcionalidade que quer executar\\
+\hline
+{\em choice} & Variavel que permite ao utilizador escolher a opção onde precisa de ajuda ou até mesmo sair do menu\\
 \hline
 \end{DoxyParams}
