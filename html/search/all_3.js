@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ler_4',['ler',['../funcoes_8c.html#a7bba5666a3be44f94af65034c8cc373a',1,'ler(int v[N]):&#160;funcoes.c'],['../funcoes_8h.html#a7bba5666a3be44f94af65034c8cc373a',1,'ler(int v[N]):&#160;funcoes.c']]],
-  ['limpainput_5',['limpaInput',['../funcoes_8c.html#a7fbea99ae4f6bb57e9a5fd5fa45022b5',1,'limpaInput():&#160;funcoes.c'],['../funcoes_8h.html#a7fbea99ae4f6bb57e9a5fd5fa45022b5',1,'limpaInput():&#160;funcoes.c']]]
+  ['grupo_203_20lp_202021_4',['Grupo 3 LP 2021',['../index.html',1,'']]]
 ];

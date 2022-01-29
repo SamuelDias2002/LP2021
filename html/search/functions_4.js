@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vetorsin_25',['vetorsin',['../funcoes_8c.html#a266f24382bb25b6ee5b1fc6809417917',1,'vetorsin(int v[N]):&#160;funcoes.c'],['../funcoes_8h.html#a266f24382bb25b6ee5b1fc6809417917',1,'vetorsin(int v[N]):&#160;funcoes.c']]]
+  ['ordemcrescente_32',['ordemcrescente',['../funcoes_8c.html#ac3f0692c7fdb30e5b5a84a98368f0f9d',1,'ordemcrescente(int v[N]):&#160;funcoes.c'],['../funcoes_8h.html#ac3f0692c7fdb30e5b5a84a98368f0f9d',1,'ordemcrescente(int v[N]):&#160;funcoes.c']]]
 ];

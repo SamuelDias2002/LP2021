@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['grupo_20x_20lp_202021_3',['Grupo x LP 2021',['../index.html',1,'']]]
+  ['funcoes_2ec_2',['funcoes.c',['../funcoes_8c.html',1,'']]],
+  ['funcoes_2eh_3',['funcoes.h',['../funcoes_8h.html',1,'']]]
 ];

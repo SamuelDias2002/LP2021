@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "dfglmorv",
+  0: "defglmorv",
   1: "fm",
-  2: "dlmov",
+  2: "delmov",
   3: "gr"
 };
 
