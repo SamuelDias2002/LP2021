@@ -1,4 +1,4 @@
-@mainpage Grupo x LP 2021
+@mainpage Grupo 3 LP 2021
 Este trabalho consiste na realização de um programa que executa várias tarefas após armazenar um vetor dado pelo utilizador. 
 
 Esse vetor é limitado.

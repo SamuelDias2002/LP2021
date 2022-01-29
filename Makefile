@@ -1,7 +1,7 @@
 all: programa.exe
 
 .PHONY: all clear
-	
+	clean : rm *.o
 
 programa.exe : main.o funcoes.o
 	gcc -o main.exe main.o funcoes.o -lm
